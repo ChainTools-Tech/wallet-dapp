@@ -406,6 +406,86 @@ export const networks: NetworkConfig[] = [
     },
     icon: 'coins/stars.png',
     localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
+  },{
+    id: 'panacea-3',
+    name: 'Madibloc',
+    description: 'Madibloc Mainnet',
+    logo: 'logo.svg',
+    website: 'https://medibloc.co.kr/',
+    apiURL: 'https://api.gopanacea.org:443',
+    rpcURL: 'https://rpc.gopanacea.org:443',
+    explorerURL: 'https://www.mintscan.io/medibloc/',
+    supplyURL: null,
+    minBlockHeight: 1,
+    stakingDenom: 'MED',
+    coinLookup: [
+      {
+        viewDenom: 'MED',
+        chainDenom: 'umed',
+        chainToViewConversionFactor: 1e-6,
+        icon: 'currencies/bitsong.png',
+      },
+    ],
+    addressPrefix: 'panacea',
+    validatorAddressPrefix: 'panaceavaloper',
+    validatorConsensusaddressPrefix: 'panaceavalcons', // needed to map validators from staking queries to the validator set
+    HDPath: 'm/44\'/118\'/0\'/0/0',
+    coinType: 118,
+    coinGeckoId: 'medibloc',
+    lockUpPeriod: '3 days',
+    fees: {
+      default: {
+        gasEstimate: 350000,
+        feeOptions: [
+          {
+            denom: 'MED',
+            amount: 0.001,
+          },
+        ],
+      },
+    },
+    icon: 'coins/med.png',
+    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
+  },{
+    id: 'darchub',
+    name: 'Konstellation',
+    description: 'Konstellation Mainnet',
+    logo: 'logo.svg',
+    website: 'https://konstellation.tech/',
+    apiURL: 'https://node1.konstellation.tech:1318',
+    rpcURL: 'https://node1.konstellation.tech:26657',
+    explorerURL: 'https://www.mintscan.io/konstellation/',
+    supplyURL: null,
+    minBlockHeight: 1,
+    stakingDenom: 'DARC',
+    coinLookup: [
+      {
+        viewDenom: 'DARC',
+        chainDenom: 'udarc',
+        chainToViewConversionFactor: 1e-6,
+        icon: 'currencies/bitsong.png',
+      },
+    ],
+    addressPrefix: 'darc',
+    validatorAddressPrefix: 'darcvaloper',
+    validatorConsensusaddressPrefix: 'darcvalcons', // needed to map validators from staking queries to the validator set
+    HDPath: 'm/44\'/118\'/0\'/0/0',
+    coinType: 118,
+    coinGeckoId: 'darcmatter-coin',
+    lockUpPeriod: '3 days',
+    fees: {
+      default: {
+        gasEstimate: 350000,
+        feeOptions: [
+          {
+            denom: 'DARC',
+            amount: 0.001,
+          },
+        ],
+      },
+    },
+    icon: 'coins/darc.png',
+    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
   }
 ];
 
