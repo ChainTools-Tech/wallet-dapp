@@ -106,115 +106,15 @@ export const networks: NetworkConfig[] = [
     localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
   },
   {
-    id: 'osmosis-1',
-    name: 'Osmosis',
-    description: 'Osmosis Mainnet',
-    logo: 'logo.svg',
-    website: 'https://osmosis.zone',
-    apiURL: 'https://lcd.osmosis.bas.network',
-    rpcURL: 'https://rpc.osmosis.bas.network',
-    explorerURL: 'https://www.mintscan.io/osmosis/',
-    supplyURL: null,
-    minBlockHeight: 4421953,
-    stakingDenom: 'OSMO',
-    coinLookup: [
-      {
-        viewDenom: 'OSMO',
-        chainDenom: 'uosmo',
-        chainToViewConversionFactor: 1e-6,
-        icon: 'currencies/bitsong.png',
-      },
-    ],
-    addressPrefix: 'osmo',
-    validatorAddressPrefix: 'osmovaloper',
-    validatorConsensusaddressPrefix: 'osmovalcons', // needed to map validators from staking queries to the validator set
-    HDPath: 'm/44\'/118\'/0\'/0/0',
-    coinType: 118,
-    coinGeckoId: 'osmosis',
-    lockUpPeriod: '3 days',
-    fees: {
-      default: {
-        gasEstimate: 350000,
-        feeOptions: [
-          {
-            denom: 'OSMO',
-            amount: 0.001,
-          },
-        ],
-      },
-      ibcTransfer: {
-        gasEstimate: 180000,
-        feeOptions: [
-          {
-            denom: 'osmo',
-            amount: 0,
-          },
-        ],
-      },
-    },
-    icon: 'coins/osmosis.svg',
-    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },
-  {
-    id: 'cosmoshub-4',
-    name: 'Cosmos',
-    description: 'Cosmos Mainnet',
-    logo: 'logo.svg',
-    website: 'https://cosmos.network',
-    apiURL: 'https://lcd.cosmos.bas.network',
-    rpcURL: 'https://rpc.cosmos.bas.network/',
-    explorerURL: 'https://www.mintscan.io/cosmos/',
-    supplyURL: null,
-    minBlockHeight: 9054000,
-    stakingDenom: 'ATOM',
-    coinLookup: [
-      {
-        viewDenom: 'ATOM',
-        chainDenom: 'uatom',
-        chainToViewConversionFactor: 1e-6,
-        icon: 'currencies/bitsong.png',
-      },
-    ],
-    addressPrefix: 'cosmos',
-    validatorAddressPrefix: 'cosmosvaloper',
-    validatorConsensusaddressPrefix: 'cosmosvalcons', // needed to map validators from staking queries to the validator set
-    HDPath: 'm/44\'/118\'/0\'/0/0',
-    coinType: 118,
-    coinGeckoId: 'cosmos',
-    lockUpPeriod: '3 days',
-    fees: {
-      default: {
-        gasEstimate: 350000,
-        feeOptions: [
-          {
-            denom: 'ATOM',
-            amount: 0.001,
-          },
-        ],
-      },
-      ibcTransfer: {
-        gasEstimate: 180000,
-        feeOptions: [
-          {
-            denom: 'atom',
-            amount: 0,
-          },
-        ],
-      },
-    },
-    icon: 'coins/cosmos.svg',
-    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },
-  {
     id: 'desmos-mainnet',
     name: 'Desmos',
     description: 'Desmos Mainnet',
     logo: 'logo.svg',
     website: 'https://desmos.network',
-    apiURL: 'https://api.mainnet.desmos.network',
-    rpcURL: 'https://rpc.mainnet.desmos.network',
+    apiURL: 'https://desmosapi.panthea.eu',
+    rpcURL: 'https://desmosrpc.panthea.eu',
     explorerURL: 'https://www.mintscan.io/desmos/',
-    minBlockHeight: 3570001,
+    minBlockHeight: 4000000,
     supplyURL: null,
     stakingDenom: 'DSM',
     coinLookup: [
@@ -286,127 +186,8 @@ export const networks: NetworkConfig[] = [
     },
     icon: 'coins/huahua.png',
     localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },{
-    id: 'cerberus-chain-1',
-    name: 'Cerberus',
-    description: 'Cerberus Mainnet',
-    logo: 'logo.svg',
-    website: 'https://cerberus.zone/',
-    apiURL: 'https://api.cerberus.zone:1317',
-    rpcURL: 'https://rpc.cerberus.zone:26657',
-    explorerURL: 'https://www.mintscan.io/cerberus/',
-    minBlockHeight: 1,
-    supplyURL: null,
-    stakingDenom: 'CRBRUS',
-    coinLookup: [
-      {
-        viewDenom: 'CRBRUS',
-        chainDenom: 'ucrbrus',
-        chainToViewConversionFactor: 1e-6,
-        icon: 'currencies/bitsong.png',
-      },
-    ],
-    addressPrefix: 'cerberus',
-    validatorAddressPrefix: 'cerberusvaloper',
-    validatorConsensusaddressPrefix: 'cerberusvalcons', // needed to map validators from staking queries to the validator set
-    HDPath: 'm/44\'/118\'/0\'/0/0',
-    coinType: 118,
-    coinGeckoId: 'cerberus-2',
-    lockUpPeriod: '3 days',
-    fees: {
-      default: {
-        gasEstimate: 350000,
-        feeOptions: [
-          {
-            denom: 'CRBRUS',
-            amount: 0.001,
-          },
-        ],
-      },
-    },
-    icon: 'coins/crbrus.png',
-    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },{
-    id: 'likecoin-mainnet-2',
-    name: 'LikeCoin',
-    description: 'LikeCoin Mainnet',
-    logo: 'logo.svg',
-    website: 'https://like.co',
-    apiURL: 'https://mainnet-node.like.co',
-    rpcURL: 'https://mainnet-node.like.co:443/rpc/',
-    explorerURL: 'https://likecoin.bigdipper.live/',
-    supplyURL: null,
-    minBlockHeight: 2167000,
-    stakingDenom: 'LIKE',
-    coinLookup: [
-      {
-        viewDenom: 'LIKE',
-        chainDenom: 'nanolike',
-        chainToViewConversionFactor: 1e-9,
-        icon: 'currencies/bitsong.png',
-      },
-    ],
-    addressPrefix: 'cosmos',
-    validatorAddressPrefix: 'cosmosvaloper',
-    validatorConsensusaddressPrefix: 'cosmosvalcons', // needed to map validators from staking queries to the validator set
-    HDPath: 'm/44\'/118\'/0\'/0/0',
-    coinType: 118,
-    coinGeckoId: 'likecoin',
-    lockUpPeriod: '3 days',
-    fees: {
-      default: {
-        gasEstimate: 350000,
-        feeOptions: [
-          {
-            denom: 'LIKE',
-            amount: 0.001,
-          },
-        ],
-      },
-    },
-    icon: 'coins/likecoin.svg',
-    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },{
-    id: 'stargaze-1',
-    name: 'Stargaze',
-    description: 'Stargaze Mainnet',
-    logo: 'logo.svg',
-    website: 'https://www.stargaze.zone',
-    apiURL: 'https://api.stargaze.ezstaking.io',
-    rpcURL: 'https://rpc.stargaze.ezstaking.io/',
-    explorerURL: 'https://www.mintscan.io/stargaze/',
-    supplyURL: null,
-    minBlockHeight: 1,
-    stakingDenom: 'STARS',
-    coinLookup: [
-      {
-        viewDenom: 'STARS',
-        chainDenom: 'ustars',
-        chainToViewConversionFactor: 1e-6,
-        icon: 'currencies/bitsong.png',
-      },
-    ],
-    addressPrefix: 'stars',
-    validatorAddressPrefix: 'starsvaloper',
-    validatorConsensusaddressPrefix: 'starsvalcons', // needed to map validators from staking queries to the validator set
-    HDPath: 'm/44\'/118\'/0\'/0/0',
-    coinType: 118,
-    coinGeckoId: 'stargaze',
-    lockUpPeriod: '3 days',
-    fees: {
-      default: {
-        gasEstimate: 350000,
-        feeOptions: [
-          {
-            denom: 'STARS',
-            amount: 0.001,
-          },
-        ],
-      },
-    },
-    icon: 'coins/stars.png',
-    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
-  },{
+  },
+  {
     id: 'panacea-3',
     name: 'Madibloc',
     description: 'Madibloc Mainnet',

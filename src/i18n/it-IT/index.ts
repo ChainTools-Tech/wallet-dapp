@@ -171,9 +171,7 @@ export default {
   login: {
     title: 'welcome',
     explore: 'Explore with any address',
-    keplr: 'Keplr Browser Extension',
-    extension: 'Bitsong Browser Extension',
-    mobile: 'Ledger Bitsong App'
+    keplr: 'Keplr Browser Extension'
   },
   disclaimer: {
     title: 'Before you begin using the wallet',

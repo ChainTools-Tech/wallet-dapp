@@ -24,14 +24,6 @@ export default [
             }
           },
           {
-            path: 'ledger',
-            name: 'ledger',
-            component: () => import('./views/Ledger.vue'),
-            meta: {
-              title: 'Ledger'
-            }
-          },
-          {
             path: 'explore',
             name: 'explore',
             component: () => import('./views/Explore.vue'),
