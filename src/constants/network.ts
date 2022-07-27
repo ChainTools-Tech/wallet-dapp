@@ -267,6 +267,46 @@ export const networks: NetworkConfig[] = [
     },
     icon: 'coins/darc.png',
     localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
+  },{
+    id: 'fetchhub-4',
+    name: 'Fetch.ai',
+    description: 'Fetch.ai Mainnet',
+    logo: 'logo.svg',
+    website: 'https://fetch-ai.network/',
+    apiURL: 'https://rest-fetchhub.fetch.ai:443',
+    rpcURL: 'https://rpc-fetchhub.fetch.ai:443',
+    explorerURL: 'https://explore-fetchhub.fetch.ai',
+    supplyURL: null,
+    minBlockHeight: 6000000,
+    stakingDenom: 'FET',
+    coinLookup: [
+      {
+        viewDenom: 'FET',
+        chainDenom: 'afet',
+        chainToViewConversionFactor: 1e-12,
+        icon: 'coins/fetchhub.png',
+      },
+    ],
+    addressPrefix: 'fetch',
+    validatorAddressPrefix: 'fetchvaloper',
+    validatorConsensusaddressPrefix: 'fetchvalcons', // needed to map validators from staking queries to the validator set
+    HDPath: 'm/44\'/118\'/0\'/0/0',
+    coinType: 118,
+    coinGeckoId: 'fetch-ai',
+    lockUpPeriod: '3 days',
+    fees: {
+      default: {
+        gasEstimate: 350000,
+        feeOptions: [
+          {
+            denom: 'FET',
+            amount: 0.001,
+          },
+        ],
+      },
+    },
+    icon: 'coins/fetchhub.png',
+    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
   }
 ];
 
