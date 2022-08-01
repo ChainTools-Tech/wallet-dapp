@@ -283,7 +283,7 @@ export const networks: NetworkConfig[] = [
       {
         viewDenom: 'FET',
         chainDenom: 'afet',
-        chainToViewConversionFactor: 1e-12,
+        chainToViewConversionFactor: 1e-18,
         icon: 'coins/fetchhub.png',
       },
     ],
@@ -300,6 +300,46 @@ export const networks: NetworkConfig[] = [
         feeOptions: [
           {
             denom: 'FET',
+            amount: 0.001,
+          },
+        ],
+      },
+    },
+    icon: 'coins/fetchhub.png',
+    localSigning: false, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
+  },{
+    id: 'sentinelhub-2',
+    name: 'Sentinel',
+    description: 'Sentinel Mainnet',
+    logo: 'logo.svg',
+    website: 'https://sentinel.co/',
+    apiURL: 'https://api.sentinel.chaintools.tech:443',
+    rpcURL: 'https://rpc.sentinel.chaintools.tech:443',
+    explorerURL: 'https://minstscan.io/sentinel',
+    supplyURL: null,
+    minBlockHeight: 6856000,
+    stakingDenom: 'DVPN',
+    coinLookup: [
+      {
+        viewDenom: 'DVPN',
+        chainDenom: 'udvpn',
+        chainToViewConversionFactor: 1e-6,
+        icon: 'coins/fetchhub.png',
+      },
+    ],
+    addressPrefix: 'sent',
+    validatorAddressPrefix: 'sentvaloper',
+    validatorConsensusaddressPrefix: 'sentvalcons', // needed to map validators from staking queries to the validator set
+    HDPath: 'm/44\'/118\'/0\'/0/0',
+    coinType: 118,
+    coinGeckoId: 'sentinel',
+    lockUpPeriod: '3 days',
+    fees: {
+      default: {
+        gasEstimate: 350000,
+        feeOptions: [
+          {
+            denom: 'DVPN',
             amount: 0.001,
           },
         ],
